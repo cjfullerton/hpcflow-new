@@ -116,7 +116,7 @@ jobs:
         run: |
           tag=${{ env.cur_tag }}
           tagNoV=${tag:1}
-          echo pyinstaller/dist/hpcflow-${{ env.vers }}-${{ matrix.executable_os }}${{ matrix.executable_ext }}
+          pyinstaller/dist/hpcflow-${{ env.vers }}-${{ matrix.executable_os }}${{ matrix.executable_ext }}
           hpcflow_vers=$(pyinstaller/dist/hpcflow-${{ env.vers }}-${{ matrix.executable_os }}${{ matrix.executable_ext }} --version)
           hpcflow_vers_expected="hpcflow, version $tagNoV"
           echo $hpcflow_vers
