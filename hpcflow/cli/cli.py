@@ -1,6 +1,8 @@
 import click
 
-import zarr
+import multiprocessing
+
+multiprocessing.freeze_support()
 
 
 @click.group()
@@ -28,5 +30,7 @@ def get(all):
 
 
 if __name__ == "__main__":
+    import zarr
+
     zarr.array([1, 2, 3])
     cli()
