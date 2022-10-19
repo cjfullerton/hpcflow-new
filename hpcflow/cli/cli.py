@@ -1,6 +1,6 @@
 import click
 
-import zarr
+# import zarr
 
 
 @click.group()
@@ -28,6 +28,5 @@ def get(all):
 
 
 if __name__ == "__main__":
-    print("creating a zarr array", flush=True)
-    zarr.array([1, 2, 3])
+    # zarr.array([1, 2, 3])
     cli()
