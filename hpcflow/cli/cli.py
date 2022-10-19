@@ -1,5 +1,7 @@
 import click
 
+import zarr
+
 
 @click.group()
 @click.version_option(prog_name="hpcflow", version="0.2.0a4")
@@ -26,4 +28,6 @@ def get(all):
 
 
 if __name__ == "__main__":
+    print("creating a zarr array", flush=True)
+    zarr.array([1, 2, 3])
     cli()
