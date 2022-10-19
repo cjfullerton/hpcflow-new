@@ -4,4 +4,4 @@ EXE_NAME_DEFAULT="hpcflow"
 LOG_LEVEL_DEFAULT="INFO"
 EXE_NAME="${1:-$EXE_NAME_DEFAULT}"
 LOG_LEVEL="${2:-$LOG_LEVEL_DEFAULT}"
-poetry run pyinstaller --log-level=$LOG_LEVEL --debug="bootloader" --clean -y --name=$EXE_NAME ../hpcflow/cli/cli.py
+poetry run pyinstaller --log-level=$LOG_LEVEL --debug="bootloader" --onefile --clean -y --name=$EXE_NAME ../hpcflow/cli/cli.py
